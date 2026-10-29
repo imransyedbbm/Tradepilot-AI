@@ -1,0 +1,15 @@
+[project]
+name = "tradepilot-ai"
+version = "0.4.0"
+description = "Modular paper-first trading platform for NSE/BSE cash equities"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.115.6", "uvicorn==0.32.1", "pydantic==2.10.4", "pydantic-settings==2.7.0",
+  "sqlalchemy==2.0.36", "psycopg[binary]==3.2.3",
+]
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "httpx==0.28.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
